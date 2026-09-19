@@ -1,0 +1,6 @@
+{
+  // Global markdownlint rules for Neovim (markdownlint-cli2 via nvim-lint).
+  "default": true,
+  // MD013: line length — disable the 80-char-per-line warning.
+  "MD013": false
+}

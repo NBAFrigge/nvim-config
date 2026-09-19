@@ -5,6 +5,10 @@
 vim.keymap.set({ "n", "v" }, ";", ":", { desc = "Command mode" })
 vim.keymap.set("n", ":", ";", { desc = "Repeat last f/F/t/T" })
 
+-- Keep cursor centered when scrolling half-page.
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
+
 vim.keymap.set("n", "<F5>", function()
   require("dap").continue()
 end, { desc = "Debug: Start/Continue" })
