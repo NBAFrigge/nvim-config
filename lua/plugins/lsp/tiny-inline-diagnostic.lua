@@ -12,7 +12,8 @@ return {
         enable_on_insert = false,
       },
     })
-    -- Let tiny-inline-diagnostic own the virtual text so they don't double up.
-    vim.diagnostic.config({ virtual_text = false })
+    -- NOTE: virtual_text is disabled centrally in lsp.lua (opts.diagnostics),
+    -- which is the single source of truth for vim.diagnostic.config. This
+    -- plugin only owns the inline rendering, not the global diagnostic config.
   end,
 }
